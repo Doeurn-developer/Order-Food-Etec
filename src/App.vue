@@ -1,8 +1,10 @@
 <script setup>
-import AppNavbar from "./components/AppNavbar.vue";
+import LayoutMenu from "./Layouts/LayoutMenu.vue";
 </script>
 
 <template>
-  <AppNavbar />
-  <RouterView />
+  <LayoutMenu/>
+  <div >
+    <RouterView />
+  </div>
 </template>

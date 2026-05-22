@@ -9,10 +9,10 @@ const cartStore = useCartStore();
 </script>
 
 <template>
-  <div class="border rounded-xl p-4 shadow">
-    <img :src="food.image" class="w-full h-40 object-cover rounded-lg" />
+  <div class="border border-blue-500 rounded-xl p-4 shadow">
+    <img :src="food.image" class="w-full h-[65%] object-cover rounded-lg" />
 
-    <h2 class="text-xl font-bold mt-3">
+    <h2 class="text-xl font-bold text-white mt-3">
       {{ food.name }}
     </h2>
 

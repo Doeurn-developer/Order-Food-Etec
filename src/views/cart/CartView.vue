@@ -7,7 +7,10 @@ const cartStore = useCartStore();
 </script>
 
 <template>
-  <div class="p-6">
+  <div class="p-6 bg-zinc-800 text-white">
+    <div class="py-4 text-xl hover:text-red-600">
+        <RouterLink to="/"><i class="fa-solid fa-circle-chevron-left"></i></RouterLink>
+      </div>
     <h1 class="text-3xl font-bold mb-5">Shopping Cart</h1>
 
     <CartItemRow
