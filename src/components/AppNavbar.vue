@@ -1,4 +1,5 @@
 <script setup>
+import LayoutMenu from '../Layouts/LayoutMenu.vue';
 import SlideBar from './slideBar.vue';
 
 // import { useCartStore } from "../stores/cart";
@@ -12,7 +13,7 @@ import SlideBar from './slideBar.vue';
   >
     <RouterLink
       to="/"
-      class="font-bold text-3xl bg-gradient-to-r from-emerald-800 to-emerald-500 bg-clip-text text-transparent no-underline hover:scale-105 duration-300"
+      class="route1 text-3xl bg-gradient-to-r from-emerald-800 to-emerald-500 bg-clip-text text-transparent no-underline hover:scale-105 duration-300"
     >
       FOOD ORDER
     </RouterLink>
@@ -26,4 +27,5 @@ import SlideBar from './slideBar.vue';
       </RouterLink>
     </div> -->
   </nav>
+  
 </template>

@@ -4,7 +4,7 @@ import CheckoutView from "../views/checkout/CheckoutView.vue";
 import HomePage from "../views/Home/HomePage.vue";
 const routes = [
    {
-    path: "/home",
+    path: "/",
     name:' Home',
     component:HomePage
   },

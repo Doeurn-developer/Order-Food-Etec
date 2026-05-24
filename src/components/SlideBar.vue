@@ -1,6 +1,7 @@
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-
+import Banner1 from "../assets/image/Banner01.jpg"
+import Banner2 from "../assets/image/Banner02.jpg"
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -11,21 +12,24 @@ const modules = [Autoplay, Pagination, Navigation];
 </script>
 
 <template>
-  <div class="h-[500px] bg-black mt-16 ">
+  <div class="h-[500px] w-[90%] m-auto  mt-16 ">
     <Swiper
       :modules="modules"
       :spaceBetween="30"
       :centeredSlides="true"
       :autoplay="{
         delay: 2500,
-        disableOnInteraction: false,
+       
       }"
       :pagination="{ clickable: true }"
-      :navigation="true"
+     
       class="h-full w-full"
     >
       <SwiperSlide class="flex items-center justify-center text-white text-4xl relative">
-       <img class="w-full h-full relative" src="https://dcassetcdn.com/design_img/3972348/22790/27176200/0ex7smr2x3ywtsefye9cpskg5j_image.png" alt="">
+       <img class="w-full h-full relative" :src="Banner1" alt="">
+      </SwiperSlide>   
+      <SwiperSlide class="flex items-center justify-center text-white text-4xl relative">
+       <img class="w-full h-full relative" :src="Banner2" alt="">
       </SwiperSlide>   
     </Swiper>
     
