@@ -1,4 +1,6 @@
 <script setup>
+import SlideBar from './slideBar.vue';
+
 // import { useCartStore } from "../stores/cart";
 
 // const cartStore = useCartStore();

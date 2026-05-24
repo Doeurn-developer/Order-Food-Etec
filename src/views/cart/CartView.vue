@@ -4,10 +4,13 @@ import CartItemRow from "./componets/CartItemRow.vue";
 import { formatCurrency } from "../../utils/formatCurrency";
 
 const cartStore = useCartStore();
+const removeItem = (id) => {
+  carts.value = carts.value.filter((item) => item.id !== id);
+};
 </script>
 
 <template>
-  <div class="p-6 bg-zinc-800 text-white">
+  <div class="p-6 bg-zinc-800 w-[70%] mt-4 m-auto rounded-lg shadow-lg text-white">
     <div class="py-4 text-xl hover:text-red-600">
         <RouterLink to="/"><i class="fa-solid fa-circle-chevron-left"></i></RouterLink>
       </div>
@@ -17,6 +20,7 @@ const cartStore = useCartStore();
       v-for="item in cartStore.cartItems"
       :key="item.id"
       :item="item"
+      @remove="removeItem"
     />
 
     <div class="mt-5 text-xl font-bold">

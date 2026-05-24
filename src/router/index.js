@@ -1,31 +1,25 @@
 import { createRouter, createWebHistory } from "vue-router";
-
 import MenuView from "../views/menu/MenuView.vue";
-import CartView from "../views/cart/CartView.vue";
 import CheckoutView from "../views/checkout/CheckoutView.vue";
-import OrderHistoryView from "../views/orders/OrderHistoryView.vue";
-
+import HomePage from "../views/Home/HomePage.vue";
 const routes = [
-  {
-    path: "/",
-    name: "menu",
-    component: MenuView,
+   {
+    path: "/home",
+    name:' Home',
+    component:HomePage
   },
   {
-    path: "/cart",
-    name: "cart",
-    component: CartView,
+    path: "/menu",
+    name: "menu",
+    component: MenuView,
   },
   {
     path: "/checkout",
     name: "checkout",
     component: CheckoutView,
   },
-  {
-    path: "/orders",
-    name: "orders",
-    component: OrderHistoryView,
-  },
+ 
+  
 ];
 
 const router = createRouter({

@@ -3,8 +3,10 @@ import LayoutMenu from "./Layouts/LayoutMenu.vue";
 </script>
 
 <template>
-  <LayoutMenu/>
-  <div >
-    <RouterView />
+  <div>
+    <LayoutMenu/>
+  </div>
+  <div>
+    <RouterView/>
   </div>
 </template>

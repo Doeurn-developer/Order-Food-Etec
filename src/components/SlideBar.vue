@@ -11,7 +11,7 @@ const modules = [Autoplay, Pagination, Navigation];
 </script>
 
 <template>
-  <div class="h-[500px] bg-black mt-16">
+  <div class="h-[500px] bg-black mt-16 ">
     <Swiper
       :modules="modules"
       :spaceBetween="30"
@@ -24,13 +24,10 @@ const modules = [Autoplay, Pagination, Navigation];
       :navigation="true"
       class="h-full w-full"
     >
-      <SwiperSlide class="flex items-center justify-center text-white text-4xl">
-       <img class="w-full h-full" src="https://i.pinimg.com/736x/a3/5c/34/a35c34a69f8e9128df7ccea8f8d706b9.jpg" alt="">
-      </SwiperSlide>
-
-      <SwiperSlide class="flex items-center justify-center text-white text-4xl">
-        Slide 2
-      </SwiperSlide>
+      <SwiperSlide class="flex items-center justify-center text-white text-4xl relative">
+       <img class="w-full h-full relative" src="https://dcassetcdn.com/design_img/3972348/22790/27176200/0ex7smr2x3ywtsefye9cpskg5j_image.png" alt="">
+      </SwiperSlide>   
     </Swiper>
+    
   </div>
 </template>

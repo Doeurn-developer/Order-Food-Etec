@@ -10,7 +10,7 @@ function placeOrder() {
 </script>
 
 <template>
-  <div class="p-6">
+  <div class="p-6 bg-blue-950">
     <h1 class="text-3xl font-bold mb-5">
       Checkout
     </h1>
