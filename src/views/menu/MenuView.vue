@@ -53,7 +53,7 @@ const decreaseQuantity = () => {
 </script>
 
 <template>
-  <div class="p-6 bg-zinc-800 min-h-screen relative">
+  <div class="p-6 bg-zinc-900 min-h-screen relative">
     
     <Transition
       enter-active-class="transform ease-out duration-300 transition"

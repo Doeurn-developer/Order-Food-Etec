@@ -9,13 +9,19 @@ import foodKhmer from "../../data/homeCart.json";
         </div>
         <div class="bg-zinc-200 m-auto h-[900px] w-[99%] p-5">
             <div class="w-[90%] m-auto flex justify-between items-center" >
-                <h1 class="text-4xl mt-4 bg-gradient-to-r from-emerald-300 hover:scale-105 route1 to-emerald-600 bg-clip-text font-bold text-transparent underline">Menu Food Khmer</h1>
-                
-                <div class="text-white mt-4 border bg-red-500 hover:bg-transparent hover:border-blue-500 duration-300 py-1 px-4 rounded-md">
-                    <RouterLink to="/menu"> Food Foreign</RouterLink>
+                <h1 class="text-4xl mt-4 bg-gradient-to-r from-emerald-300 hover:scale-105 duration-300 route1 to-emerald-600 bg-clip-text font-bold text-transparent underline">Menu Food Khmer</h1>
+                <div class="flex gap-6 items-center">
+                    <div class="text-3xl mt-4 hover:text-blue-600 hover:scale-105">
+                       <RouterLink to="/checkout">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                       </RouterLink>
+                    </div>
+                   <div class="text-white mt-5 border bg-red-500 hover:bg-transparent hover:border-blue-500 duration-300 py-1 px-4 rounded-md">
+                       <RouterLink to="/menu"> Food Foreign</RouterLink>
+                   </div>
                 </div>
             </div>
-            <div  class="grid md:grid-cols-4 gap-3 grid-cols-1 w-[90%] m-auto mt-7 ">
+            <div  class="grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 gap-3 grid-cols-1 w-[90%] m-auto mt-7 ">
                     <div v-for="food in foodKhmer" :key="index" class="rounded-md h-[330px] pb-4 hover:scale-105 duration-200 shadow-md border border-yellow-500 p-2">
                         <div class="h-[60%]">
                             <img class="w-full h-full rounded-md" :src="food.image" alt="">
