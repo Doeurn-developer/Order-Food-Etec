@@ -3,14 +3,14 @@ import { ref } from "vue";
 import foods from "../../data/restaurantMenu.json";
 import FoodCard from "./FoodCard.vue";
 import { useCartStore } from "../../stores/cart";
+import Swal from 'sweetalert2';     // ←←← បន្ថែមបន្ទាត់នេះ
 
 const cartStore = useCartStore();
 const showModal = ref(false);
 const selectedFood = ref(null);
 const quantity = ref(1);
 
-const showToast = ref(false);
-const toastMessage = ref("");
+// លុប showToast, toastMessage ចាស់ (មិនប្រើទៀត)
 
 const openModal = (food) => {
   selectedFood.value = food;
@@ -30,14 +30,20 @@ const addToCart = () => {
       ...selectedFood.value,
       quantity: quantity.value,
     });
-    
-    toastMessage.value = `បានបន្ថែម ${selectedFood.value.name} ទៅក្នុងកន្ត្រក!`;
-    closeModal();
 
-    showToast.value = true;
-    setTimeout(() => {
-      showToast.value = false;
-    }, 3000);
+    // SweetAlert2 Toast (ស្អាត និងទំនើប)
+    Swal.fire({
+      title: "✅ បានបន្ថែមទៅក្នុងកន្ត្រក!",
+      html: `<strong>${selectedFood.value.name}</strong>`,
+      icon: "success",
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 2500,
+      timerProgressBar: true
+    });
+
+    closeModal();
   }
 };
 
@@ -54,26 +60,12 @@ const decreaseQuantity = () => {
 
 <template>
   <div class="p-6 bg-zinc-900 min-h-screen relative">
-    
-    <Transition
-      enter-active-class="transform ease-out duration-300 transition"
-      enter-from-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
-      enter-to-class="translate-y-0 opacity-100 sm:translate-x-0"
-      leave-active-class="transition ease-in duration-100"
-      leave-from-class="opacity-100"
-      leave-to-class="opacity-0"
-    >
-      <div v-if="showToast" class="fixed top-5 right-5 z-50 bg-emerald-600 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 border border-emerald-400">
-        <i class="fa-solid fa-circle-check text-xl"></i>
-        <span class="font-medium">{{ toastMessage }}</span>
-      </div>
-    </Transition>
-
     <div class="rounded-lg border border-zinc-700 bg-zinc-800 mb-6 hover:bg-transparent duration-200 hover:scale-105 w-fit px-4 py-1.5 cursor-pointer">
       <RouterLink to="/" class="flex items-center gap-2">
         <i class="fa-regular fa-hand-point-left"></i> Back
       </RouterLink>
     </div>
+
     <div class="flex justify-between items-center mb-6">
       <h1 class="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-yellow-500 bg-clip-text text-transparent underline">
         Menu Food Foreign
@@ -103,6 +95,7 @@ const decreaseQuantity = () => {
       />
     </div>
 
+
     <div
       v-if="showModal && selectedFood"
       class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
@@ -112,10 +105,7 @@ const decreaseQuantity = () => {
         class="bg-zinc-900 rounded-lg shadow-2xl p-8 max-w-md w-full mx-4 relative"
         @click.stop
       >
-        <button
-          @click="closeModal"
-          class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
-        >
+        <button @click="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
           <i class="fa-solid fa-xmark text-2xl"></i>
         </button>
 

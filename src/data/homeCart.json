@@ -9,18 +9,42 @@
     "id": 2,
     "name": "ជ្រក់ក្រៅឆ្នាំង",
     "image": "https://i.pinimg.com/736x/fc/ad/27/fcad270f6a81062968b387579c37feb9.jpg",
-    "price": 3
+    "price": 1.25
   },
   {
     "id": 3,
     "name": "ប្រហុកខ្ទិះ​",
     "image": "https://i.pinimg.com/736x/cb/68/41/cb684197f3f9463bd0e4cd33f43b8830.jpg",
-    "price": 3
+    "price": 2.5
   },
   {
     "id": 4,
     "name": "ឆាឡុកឡាក់សាច់គោ",
     "image": "https://i.pinimg.com/736x/24/a7/48/24a748685091cabf46f08def1296899f.jpg",
-    "price": 3
+    "price": 4
+  },
+  {
+    "id": 5,
+    "name": "លតឆាបែបខ្មែរ",
+    "image": "https://i.pinimg.com/1200x/a8/97/16/a897165b06c89dc16d919bd88a0a07f6.jpg",
+    "price": 1.6
+  },
+  {
+    "id":6 ,
+    "name": "បាយស្រូបបឋមបែបខ្មែរ",
+    "image": "https://i.pinimg.com/1200x/07/db/a2/07dba2758b5a86ca8e3c1328b52c218c.jpg",
+    "price": 7
+  },
+  {
+    "id":6 ,
+    "name": "អាមុក",
+    "image": "https://i.pinimg.com/1200x/0e/65/b5/0e65b5c620692e057e683e950d9155e1.jpg",
+    "price": 7
+  },
+  {
+    "id":7,
+    "name": "ដុតមាន់ទឹកឃ្មុំបែបខ្មែរ",
+    "image": "https://i.pinimg.com/736x/f0/81/3d/f0813d77d87d231f59654e7152c7f884.jpg",
+    "price": 10
   }
 ]

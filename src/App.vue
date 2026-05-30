@@ -9,7 +9,5 @@ import HomePage from "./views/Home/HomePage.vue";
   <div>
     <LayoutMenu/>
   </div>
-  <div class="mt-16">
-    <RouterView/>
-  </div>
+  
 </template>
