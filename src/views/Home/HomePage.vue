@@ -1,7 +1,7 @@
 <script setup >
 import { RouterLink } from 'vue-router'
 import { useCartStore } from "../../stores/cart.js"   
-import SlideBar from "@/components/SlideBar.vue"
+import SlideBar from "@/components/SlideBar.vue";
 import foodKhmer from '../../data/homeCart.json'
 import Swal from 'sweetalert2'
 const cartStore = useCartStore()
