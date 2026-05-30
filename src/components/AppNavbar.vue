@@ -1,11 +1,9 @@
-<script setup>
-import LayoutMenu from '../Layouts/LayoutMenu.vue';
-import SlideBar from './SlideBar.vue';
+<!-- <script setup>
 
 // import { useCartStore } from "../stores/cart";
 
 // const cartStore = useCartStore();
-</script>
+</script> -->
 
 <template>
   <nav
