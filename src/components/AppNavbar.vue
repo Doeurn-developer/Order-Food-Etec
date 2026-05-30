@@ -1,6 +1,6 @@
 <script setup>
 import LayoutMenu from '../Layouts/LayoutMenu.vue';
-import SlideBar from './slideBar.vue';
+import SlideBar from './SlideBar.vue';
 
 // import { useCartStore } from "../stores/cart";
 
