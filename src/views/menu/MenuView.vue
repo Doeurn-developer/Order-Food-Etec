@@ -10,7 +10,7 @@ const showModal = ref(false);
 const selectedFood = ref(null);
 const quantity = ref(1);
 
-// លុប showToast, toastMessage ចាស់ (មិនប្រើទៀត)
+
 
 const openModal = (food) => {
   selectedFood.value = food;
