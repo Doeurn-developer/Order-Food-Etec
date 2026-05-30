@@ -12,7 +12,7 @@ const modules = [Autoplay, Pagination, Navigation];
 </script>
 
 <template>
-  <div class="h-[500px] w-[90%] m-auto  mt-16 ">
+  <div class="h-[500px] w-[90%] m-auto  mt-16  ">
     <Swiper
       :modules="modules"
       :spaceBetween="30"

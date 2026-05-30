@@ -67,7 +67,7 @@ const decreaseQuantity = () => {
     </div>
 
     <div class="flex justify-between items-center mb-6">
-      <h1 class="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-yellow-500 bg-clip-text text-transparent underline">
+      <h1 class="route2 text-3xl font-bold bg-gradient-to-r from-emerald-400 to-yellow-500 bg-clip-text text-transparent underline">
         Menu Food Foreign
       </h1>
       
